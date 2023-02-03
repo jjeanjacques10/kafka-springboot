@@ -40,5 +40,11 @@ public void create(String message) {...}
 public void create(String message) {...}
 ```
 
+- Add interceptor to Consumer
+
+``` java
+factory.setRecordInterceptor(validMessage());
+```
+
 ---
 Developed by [Jean Jacques Barros](https://github.com/jjeanjacques10/)
