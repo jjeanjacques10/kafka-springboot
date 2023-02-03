@@ -18,6 +18,14 @@ docker-compose up -d
 - [Kafka Drop - http://localhost:19000/](http://localhost:19000/)
 - [Str Producer - http://localhost:8000/](http://localhost:8000/)
 
+## Docker
+
+- Build image from [Docekrfile](./payment-service/Dockerfile)
+
+``` bash
+ docker build -t jjeanjacques10/payment-service:1.0.0 .
+```
+
 ## Notes
 
 - When it configs the same groupId for different @KafkaListener, they will listen to different partitions.
