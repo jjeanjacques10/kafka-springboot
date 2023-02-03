@@ -7,6 +7,7 @@ Projects from the Udemy course [Apache Kafka](https://www.udemy.com/course/apach
 - [str-producer](./str-producer/)
 - [str-consumer](./str-consumer/)
 - [payment-service](./payment-service/)
+- [json-consumer](./json-consumer/)
 
 ### Getting Started
 
@@ -45,6 +46,20 @@ public void create(String message) {...}
 
 ``` java
 factory.setRecordInterceptor(validMessage());
+```
+
+- Create a Json Consumer
+
+``` java
+  @Bean
+    public ConcurrentKafkaListenerContainerFactory<String, Object> jsonContainerFactory(
+            ConsumerFactory<String, Object> jsonConsumerFactory
+    ) {
+        var factory = new ConcurrentKafkaListenerContainerFactory<String, Object>();
+        factory.setConsumerFactory(jsonConsumerFactory);
+        factory.setMessageConverter(new JsonMessageConverter()); // <--- Add this line
+        return factory;
+    }
 ```
 
 ---
