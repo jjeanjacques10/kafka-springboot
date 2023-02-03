@@ -6,6 +6,7 @@ Projects from the Udemy course [Apache Kafka](https://www.udemy.com/course/apach
 
 - [str-producer](./str-producer/)
 - [str-consumer](./str-consumer/)
+- [payment-service](./payment-service/)
 
 ### Getting Started
 
