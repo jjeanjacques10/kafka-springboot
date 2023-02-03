@@ -23,7 +23,7 @@ docker-compose up -d
 - Build image from [Docekrfile](./payment-service/Dockerfile)
 
 ``` bash
- docker build -t jjeanjacques10/payment-service:1.0.0 .
+ docker build -t jjeanjacques/payment-service:1.0.0 .
 ```
 
 ## Notes
