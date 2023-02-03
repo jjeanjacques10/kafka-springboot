@@ -26,5 +26,19 @@ group-1: partitions assigned: [str-topic-0]
 group-2: partitions assigned: [str-topic-0, str-topic-1] # group-2 will listen to both partitions
 ```
 
+- Create a custom KafkaListener
+
+``` java
+// Before
+@KafkaListener(groupId = "group-0", topicPartitions = {
+        @TopicPartition(topic = "str-topic", partitions = {"0"})
+}, containerFactory = "strContainerFactory")
+public void create(String message) {...}
+
+// After
+@StrConsumerCustomListener(groupId = "group-0")
+public void create(String message) {...}
+```
+
 ---
 Developed by [Jean Jacques Barros](https://github.com/jjeanjacques10/)
