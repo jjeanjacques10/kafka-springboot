@@ -17,13 +17,19 @@ docker-compose up -d
 
 - [Kafka Drop - http://localhost:19000/](http://localhost:19000/)
 - [Str Producer - http://localhost:8000/](http://localhost:8000/)
+- [Payment Service - http://localhost:8000/](http://localhost:8000/)
+- [Json Consumer - http://localhost:8100/](http://localhost:8100/)
 
 ## Docker
 
 - Build image from [Docekrfile](./payment-service/Dockerfile)
 
 ``` bash
- docker build -t jjeanjacques/payment-service:1.0.0 .
+## cd ./payment-service
+docker build -t jjeanjacques/payment-service:1.0.0 .
+
+## cd ./json-consumer
+docker build -t jjeanjacques/json-consumer:1.0.0 .
 ```
 
 ## Notes
