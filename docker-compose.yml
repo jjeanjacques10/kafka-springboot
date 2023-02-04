@@ -37,7 +37,7 @@ services:
       KAFKA_BROKERCONNECT: kafka:29092
 
   payment:
-    image: jjeanjacques/payment-service:1.0.0
+    image: jjeanjacques10/payment-service:1.0.0
     networks:
       - broker-kafka
     depends_on:
@@ -48,7 +48,7 @@ services:
       KAFKA_HOST: kafka:29092
 
   consumer:
-    image: jjeanjacques/json-consumer:1.0.0
+    image: jjeanjacques10/json-consumer:1.0.0
     networks:
       - broker-kafka
     depends_on:

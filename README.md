@@ -26,11 +26,21 @@ docker-compose up -d
 
 ``` bash
 ## cd ./payment-service
-docker build -t jjeanjacques/payment-service:1.0.0 .
+docker build -t jjeanjacques10/payment-service:1.0.0 .
 
 ## cd ./json-consumer
-docker build -t jjeanjacques/json-consumer:1.0.0 .
+docker build -t jjeanjacques10/json-consumer:1.0.0 .
 ```
+
+### Upload to Docker Hub
+
+``` bash
+docker push jjeanjacques10/payment-service:1.0.0
+docker push jjeanjacques10/json-consumer:1.0.0
+```
+
+- [hub.docker.com - jjeanjacques10/payment-service](https://hub.docker.com/repository/docker/jjeanjacques10/payment-service/general)
+- [hub.docker.com - jjeanjacques10/json-consumer](https://hub.docker.com/repository/docker/jjeanjacques10/json-consumer/general)
 
 ## Notes
 
@@ -77,4 +87,4 @@ factory.setRecordInterceptor(validMessage());
 ```
 
 ---
-Developed by [Jean Jacques Barros](https://github.com/jjeanjacques10/)
+Developed by [Jean Jacques Barros](https://github.com/jjeanjacques1010/)
