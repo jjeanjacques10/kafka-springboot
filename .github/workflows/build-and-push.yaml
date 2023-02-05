@@ -32,4 +32,4 @@ jobs:
           file: ./payment-service/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/payment-service:latest
-          platforms: linux/amd64,linux/arm64,linux/arm/v7
+          platforms: linux/amd64
