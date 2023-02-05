@@ -16,8 +16,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2 # This step sets up JDK 17
+        with:
+          java-version: '17'
+          distribution: 'openjdk'
       - name: Create Jar using Maven
-        run: mvn -f ./payment-service/pom.xml clean package -DskipTests # This step creates the jar file using Maven
+        run: mvn -f ./payment-service/pom.xml clean package -DskipTests -X # This step creates the jar file using Maven
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2 # This step sets up Buildx, a tool that allows building multi-arch images
       - name: Build and push
