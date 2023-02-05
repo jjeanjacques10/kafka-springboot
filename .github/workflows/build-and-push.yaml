@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-java@v2 # This step sets up JDK 17
         with:
           java-version: '17'
-          distribution: 'openjdk'
+          distribution: 'temurin'
       - name: Create Jar using Maven
         run: mvn -f ./payment-service/pom.xml clean package -DskipTests -X # This step creates the jar file using Maven
       - name: Set up Docker Buildx
