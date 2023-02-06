@@ -1,6 +1,5 @@
 package com.jjeanjacques.jsonconsumer.config;
 
-
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -31,8 +30,7 @@ public class JsonConsumerConfig {
 
     @Bean
     public ConcurrentKafkaListenerContainerFactory<String, Object> jsonContainerFactory(
-            ConsumerFactory<String, Object> jsonConsumerFactory
-    ) {
+            ConsumerFactory<String, Object> jsonConsumerFactory) {
         var factory = new ConcurrentKafkaListenerContainerFactory<String, Object>();
         factory.setConsumerFactory(jsonConsumerFactory);
         factory.setMessageConverter(new JsonMessageConverter());
